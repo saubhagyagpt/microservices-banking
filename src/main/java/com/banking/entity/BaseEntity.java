@@ -25,4 +25,6 @@ public class BaseEntity {
 
     @Column(insertable = false)
     private LocalDateTime updatedAt;
+
+
 }
