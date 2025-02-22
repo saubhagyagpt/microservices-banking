@@ -19,11 +19,16 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Random;
 
-@Service @AllArgsConstructor
+@Service
 public class AccountsServiceImpl implements AccountsService {
 
     private AccountsRepo accountsRepo;
     private CustomerRepo customerRepo;
+
+    public AccountsServiceImpl(AccountsRepo accountsRepo, CustomerRepo customerRepo) {
+        this.accountsRepo = accountsRepo;
+        this.customerRepo = customerRepo;
+    }
 
     /**
      * @param customerDto - CustomerDto Object
